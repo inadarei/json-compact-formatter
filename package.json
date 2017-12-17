@@ -2,7 +2,7 @@
     "name": "json-compact-prettifier",
     "displayName": "json-compact-prettifier",
     "description": "Prettify JSON Without Wasting Space",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "inadarei",
     "engines": {
         "vscode": "^1.0.0"
@@ -12,8 +12,8 @@
     ],
     "icon": "img/json-icon.png",
     "galleryBanner": {
-      "color": "#252526",
-      "theme": "dark"
+      "color": "#EFF1F3",
+      "theme": "light"
     },
     "activationEvents": [
         "onCommand:extension.prettyFormatCompact"
