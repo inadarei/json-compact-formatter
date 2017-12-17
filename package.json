@@ -1,0 +1,45 @@
+{
+    "name": "json-compact-prettifier",
+    "displayName": "json-compact-prettifier",
+    "description": "Prettify JSON Without Wasting Space",
+    "version": "1.0.0",
+    "publisher": "inadarei",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "icon": "img/json-icon.png",
+    "galleryBanner": {
+      "color": "#252526",
+      "theme": "dark"
+    },
+    "activationEvents": [
+        "onCommand:extension.prettyFormatCompact"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.prettyFormatCompact",
+                "title": "Format: Compact Pretty JSON"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.6.1",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "json-stringify-pretty-compact": "1.0.4",
+        "jsonlint": "^1.6.2"
+    }
+}
