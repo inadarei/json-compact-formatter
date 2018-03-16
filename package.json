@@ -15,6 +15,10 @@
       "color": "#EFF1F3",
       "theme": "light"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/inadarei/json-compact-formatter"
+    },    
     "activationEvents": [
         "onCommand:extension.prettyFormatCompact"
     ],
