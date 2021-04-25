@@ -9,3 +9,7 @@ Enjoy.
 ## Command Installed:
 
 `Format: Compact Pretty JSON`
+
+### Contributing
+
+- Guide to writing extensions in Javascript: <https://blog.logrocket.com/writing-vs-code-extensions-in-javascript/>
