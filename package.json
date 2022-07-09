@@ -2,13 +2,15 @@
     "name": "json-compact-prettifier",
     "displayName": "json-compact-prettifier",
     "description": "Prettify JSON Without Wasting Space",
-    "version": "1.1.0",
+    "version": "1.2.1",
     "publisher": "inadarei",
     "engines": {
         "vscode": "^1.32.0"
     },
     "categories": [
-        "Other"
+        "Other",
+	"json",
+	"formatters"
     ],
     "icon": "img/json-icon.png",
     "galleryBanner": {
@@ -36,7 +38,7 @@
         "test": "node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "@types/mocha": "^10.0.0",
+        "@types/mocha": "^9.0.0",
         "@types/node": "^12.12.0",
         "@types/vscode": "^1.32.0",
         "eslint": "^7.21.0"
