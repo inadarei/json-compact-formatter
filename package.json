@@ -2,7 +2,7 @@
   "name": "json-compact-prettifier",
   "displayName": "JSON Compact Formatter/Prettifier",
   "description": "Prettify JSON Without Wasting Space",
-  "version": "1.3.9",
+  "version": "1.3.10",
   "publisher": "inadarei",
   "icon": "img/json-icon-logo.png",
   "galleryBanner": {
@@ -14,7 +14,7 @@
     "url": "https://github.com/inadarei/json-compact-formatter"
   },
   "engines": {
-    "vscode": "^1.70.0"
+    "vscode": "^1.50.0"
   },
   "categories": [
     "Other"
