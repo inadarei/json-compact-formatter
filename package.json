@@ -2,31 +2,62 @@
   "name": "json-compact-prettifier",
   "displayName": "JSON Compact Formatter/Prettifier",
   "description": "Prettify JSON Without Wasting Space",
-  "version": "1.3.7",
+  "version": "1.3.9",
   "publisher": "inadarei",
-  "engines": {"vscode": "^1.69.0"},
-  "categories": ["Other"],
   "icon": "img/json-icon-logo.png",
-  "galleryBanner": {"color": "#EFF1F3", "theme": "light"},
+  "galleryBanner": {
+    "color": "#EFF1F3",
+    "theme": "light"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/inadarei/json-compact-formatter"
   },
-  "activationEvents": ["onCommand:json-compact-prettifier.prettyFormatCompact"],
-  "main": "./extension.js",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:json-compact-formatter-ts.prettify"
+  ],
+  "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "json-compact-prettifier.prettyFormatCompact",
+        "command": "json-compact-formatter-ts.prettify",
         "title": "Format: Compact Pretty JSON"
       }
     ]
   },
   "scripts": {
-    "lint": "eslint .",
-    "test": "node ./node_modules/vscode/bin/test"
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
   },
-  "devDependencies": {"@types/node": "^12.12.0", "@types/vscode": "^1.32.0"},
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.70.0",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.20.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
   "dependencies": {
     "json-stringify-pretty-compact": "3.0.0",
     "jsonlint-mod": "^1.7.6"
