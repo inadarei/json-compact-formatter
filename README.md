@@ -4,6 +4,10 @@ JSON "prettifiers" produce unnecessarily long JSON...
 
 Sounds familiar? This VS Code extension does the right thing by formatting your code snippets in a compact, but still pretty form.
 
+## Installation:
+
+<https://marketplace.visualstudio.com/items?itemName=inadarei.json-compact-prettifier>
+
 ## Usage:
 
 1. Select a JSON text in any file type, 
